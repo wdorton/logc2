@@ -1,0 +1,5594 @@
+body {
+    background-color: rgb(37, 37, 37);
+    color:white;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: large;
+}
+
+.front-div {
+    box-shadow:  0 0 30px;
+    opacity: .5;
+}
+#logo {
+    position: fixed;
+    width: 300px;
+    box-shadow: 0 0 30px lime;
+}
+
+button {
+    background-color: rgb(43, 43, 43);
+    font-weight: bold;
+    color: aqua;
+    border-color: aqua;
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: aqua;
+    color: black;
+}
+
+#desktopversion {
+
+}
+
+
+#generalfeatures {
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    height:2vh;
+    width:fit-content;
+    border-style:solid;
+    padding:5px;
+    border-radius: 10px;
+    border-color: rgb(0, 255, 0);
+    background-color: black;
+    color: lime;
+    opacity:1;
+    margin: .25%;
+}
+
+#topbar {
+    display: none;
+    justify-content: space-between;
+    position:fixed;
+    top: 30px;
+    width: 1500px;
+    right: 5%;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 2;
+    border-style: none;
+    box-shadow: 0 0 40px lime;
+    border-width: 5px;
+    opacity: .5;
+}
+
+#topbar:hover {
+    cursor: pointer;
+    color: lime;
+    opacity: 1;
+}
+
+#closetopbar {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    left: -60px;
+    top: 10px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#closetopbar:hover {
+    background-color: red;
+}
+#updateoptions:hover {
+    cursor: pointer;
+    color: lime;
+}
+#requests:hover {
+    cursor: pointer;
+    color: lime;
+}
+#tools:hover {
+    cursor: pointer;
+    color: lime;
+}
+
+#atopdashboard:hover {
+    cursor: pointer;
+    color: lime;
+}
+
+#chooseunit {
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    top: 30px;
+    width: fit-content;
+    left: 15%;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(85, 85, 85);
+    border-radius: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 2;
+    border-style: none;
+    box-shadow: 0 0 40px aqua;
+    border-width: 5px;
+    opacity: .5;
+    align-items: center;
+}
+
+#chooseunit:hover {
+    cursor: pointer;
+    opacity: 1;
+    color: lime;
+}
+
+#topbaritems {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    margin-right: 20px;
+    color:  rgb(255, 255, 255);
+}
+
+#updateoptions {
+    display: block;
+    position: relative;
+    top: -5px;
+    font-size: 40px;
+    width: fit-content;
+    left: 50px;
+    background-color: black;
+    border: none;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+}
+
+#requests {
+    display: block;
+    position: relative;
+    top: -5px;
+    font-size: 40px;
+    width: fit-content;
+    left: 130px;
+    background-color: black;
+    border: none;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+}
+
+#tools {
+    display: block;
+    position: relative;
+    top: -5px;
+    font-size: 40px;
+    width: fit-content;
+    left: 200px;
+    background-color: black;
+    border: none;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+}
+
+#atopdashboard {
+    display: block;
+    position: relative;
+    top: 0px;
+    font-size: 40px;
+    width: fit-content;
+    left: 245px;
+    background-color: black;
+    border: none;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+}
+
+
+#unitacontainer {
+    position: absolute;
+    top:30%;
+    left:45%;
+    z-index: 2;
+}
+
+#unitacontainer button:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+#unitabackgroundcircle {
+    position: absolute;
+    display: none;
+    top: -40px;
+    left: -20px;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(37, 37, 37);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+#closeunitabutton {
+    position: absolute;
+    display:none;
+    height: 40px;
+    width: 40px;
+    left: 245px;
+    top: -150px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#closeunitabutton:hover {
+    background-color: red;
+}
+#unitadashboard {
+    position: absolute;
+    display: none;
+    top: -165px;
+    left: 90px;
+    height: 220px;
+    width: 220px;
+    background-color: black;
+    opacity: .5;
+    border-style: solid;
+    border-color: aqua;
+    border-width: thick;
+    border-radius: 0 100% 0 0;
+}
+
+#aviewlabel {
+    position: absolute;
+    display: none;
+    top: 35%;
+    left: 35%;
+    color: aqua;
+    font-size: 80px;
+}
+#unitareports {
+    position: absolute;
+    display: none;
+    top: 75px;
+    left: 90px;
+    height: 220px;
+    width: 220px;
+    background-color: black;
+    opacity: .5;
+    border-style: solid;
+    border-color: aqua;
+    border-width: thick;
+    border-radius: 0 0 100% 0;
+}
+#ainputlabel {
+    position: absolute;
+    display: none;
+    top: 30%;
+    left: 30%;
+    color: aqua;
+    font-size: 70px;
+}
+
+#closereportsdropdown {
+    position: absolute;
+    display:none;
+    height: 40px;
+    width: 40px;
+    left: 645px;
+    top: 110px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#closereportsdropdown:hover {
+    background-color: red;
+}
+#inputformslist {
+    position: absolute;
+    display: none;
+    width: fit-content;
+    top: 100px;
+    left: 350px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 2;
+    border-style: none;
+    box-shadow: 0 0 40px lime;
+    border-width: 5px;
+    opacity: .5;
+}
+
+#inputformslist:hover {
+    opacity: 1;
+    color: lime;
+    cursor: pointer;
+
+}
+
+#closetoolsdropdown {
+    position: absolute;
+    display:none;
+    height: 40px;
+    width: 40px;
+    left: -605px;
+    top: 110px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#closetoolsdropdown:hover {
+    background-color: red;
+}
+#toolsformslist {
+    position: absolute;
+    display: none;
+    width: fit-content;
+    top: 100px;
+    left: -550px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 2;
+    border-style: none;
+    box-shadow: 0 0 40px lime;
+    border-width: 5px;
+    opacity: .5;
+}
+
+#toolsformslist:hover {
+    opacity: 1;
+    color: lime;
+    cursor: pointer;
+
+}
+
+
+#unitatools {
+    position: absolute;
+    display: none;
+    top: 75px;
+    left: -145px;
+    height: 220px;
+    width: 220px;
+    background-color: black;
+    opacity: .5;
+    border-style: solid;
+    border-color: aqua;
+    border-width: thick;
+    border-radius: 0 0 0 100%;
+}
+#atoolslabel {
+    position: absolute;
+    display: none;
+    top: 30%;
+    left: 40%;
+    color: aqua;
+    font-size: 70px;
+}
+
+#unitarequests {
+    position: absolute;
+    display: none;
+    top: -165px;
+    left: -145px;
+    height: 220px;
+    width: 220px;
+    background-color: black;
+    opacity: .5;
+    border-style: solid;
+    border-color: aqua;
+    border-width: thick;
+    border-radius: 100% 0 0 0;
+}
+#arequestslabel {
+    position: absolute;
+    display: none;
+    top: 35%;
+    left: 35%;
+    color: aqua;
+    font-size: 70px;
+}
+
+#unitabox {
+    position: absolute;
+    border-style: solid;
+    background-color: rgb(0, 191, 255);
+    border-color: black;
+    width: 130px;
+    height: 90px;
+    left: 10px;
+    top: -10px;
+    color: black;
+}
+
+#unitabox a {
+    position: absolute;
+    top: -55px;
+    left: 5px;
+    font-size: 35px;
+    font-weight:600;
+}
+
+#unitabox:hover {
+    cursor: pointer;
+    background-color: lime;
+}
+
+#aclass1circle {
+    position:absolute;
+    top: 90px;
+    left: 6px;
+    border-style: solid;
+    border-color:black;
+    color: black;
+    background-color: rgb(0, 191, 255);
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+#aclass1circle a {
+    position:absolute;
+    top: 7px;
+    left: 13.5px;
+    font-size: 25px;
+}
+
+#aclass3circle {
+    position:absolute;
+    top: 90px;
+    left: 57.5px;
+    border-style: solid;
+    border-color:black;
+    color: black;
+    background-color: rgb(0, 191, 255);
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+#aclass3circle a {
+    position:absolute;
+    top: 7px;
+    left: 7px;
+    font-size: 25px;
+}
+
+#aclass5circle {
+    position:absolute;
+    top: 90px;
+    left: 110px;
+    border-style: solid;
+    border-color:black;
+    color: black;
+    background-color: rgb(0, 191, 255);
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+#aclass5circle a {
+    position:absolute;
+    top: 7px;
+    left: 8.5px;
+    font-size: 25px;
+}
+
+#supplyupdateform {
+    position: absolute;
+    display: none;
+    left: 5vw;
+    top:20vh;
+    width: 920px;
+    height:650px;
+    border: none;
+    box-shadow: 0 0 30px aqua;
+    border-width: 10px;
+    border-radius: 25px;
+    background-color: rgb(51, 51, 51);
+    font-size: x-large;
+    z-index: 1;
+}
+
+#supplyupdateform.active {
+    z-index: 2;
+    opacity: 1;
+}
+
+#supplyupdateheader {
+    position: absolute;
+    display:block;
+    text-align: center;
+    margin-left: 20px;
+}
+
+#closesupplyupdateform {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closesupplyupdateform:hover {
+    background-color: red;
+}
+
+#criticalsuppliescontainer {
+    position: absolute;
+    display: block;
+    top:20%;
+    width: 100%;
+}
+
+#criticalsuppliestopborder {
+    position: absolute;
+    display: block;
+    height:0px;
+    width:99%;
+    top: -20px;
+    left: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170);
+}
+
+#opensupplyupdate {
+    position: absolute;
+    display: block;
+    top:11%;
+    left: 30%;
+    height:40px;
+    width:40px;
+    font-size: 30px;
+    background-color: none;
+    border: none;
+}
+
+#openpersonnelupdate {
+    position: absolute;
+    display: block;
+    top:2%;
+    left: 94%;
+    height:40px;
+    width:40px;
+    font-size: 30px;
+    background-color: none;
+    border: none;
+}
+
+#openequipmentupdate {
+    position: absolute;
+    display: block;
+    top:2%;
+    left: 92%;
+    height:40px;
+    width:40px;
+    font-size: 30px;
+    background-color: none;
+    border: none;
+}
+
+
+#class1updateheader {
+    position: absolute;
+    display: block;
+    top: -30px;
+    margin-left: 60px;
+    color: lightblue;
+}
+
+#class1timeheader {
+    position: absolute;
+    display: inline-flex;
+    margin-top: -10px;
+}
+
+#class1updatetime {
+    position: absolute;
+    display: inline-flex;
+    width: 140px;
+    margin-left: 140px;
+}
+#class1update {
+position: absolute;
+display: block;
+top: 80px;
+margin-left: 20px;
+}
+
+#waterupdate {
+    position: absolute;
+    display: block;
+    margin-top: 30px;
+}
+
+#waterupdateform {
+    display: none;
+
+}
+
+#waterupdatefields {
+    position: absolute;
+    display: block;
+    top: 80px;
+}
+
+#class1waterunitmeasurement{
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 282px;
+    height:40px;
+    padding: 3px;
+
+}
+
+#class1watercapacity {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 30px;
+
+}
+#class1wateronhand {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 60px;
+
+}
+
+#class1waternotes {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 90px;
+}
+
+#class1output {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 30px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color: gray;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    top: 310px;
+    text-align: center;
+}
+
+#foodupdateform {
+    display: none;
+
+}
+#foodupdate {
+    position: absolute;
+    display: block;
+    margin-top: 30px;
+    left: 180px;
+    }
+
+#foodupdatefields {
+    position: absolute;
+    display: block;
+    top: 80px;
+}
+
+#class1foodunitmeasurement{
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 282px;
+    height:40px;
+    padding: 3px;
+
+}
+
+#class1foodcapacity {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 30px;
+
+}
+#class1foodonhand {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 60px;
+
+}
+
+#class1foodnotes {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 90px;
+}
+
+
+#class1updatebutton {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    top: 350px;
+    margin-left: 165px;
+    margin-top: 20px;
+    font-size: x-large;
+}
+
+#class1refreshbutton {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    top: 350px;
+    margin-left: 0px;
+    margin-top: 20px;
+    font-size: x-large;    
+}
+
+#supplyupdateleftborder {
+    position: absolute;
+    display: block;
+    top:-11px;
+    height:530px;
+    width: 10px;
+    background-color: rgb(146, 146, 146);
+    margin-left: 33.2%;
+}
+
+#class3updateheader {
+    position: absolute;
+    display: block;
+    top: -30px;
+    margin-left: 360px;
+    color: lightblue;
+}
+
+#class3timeheader {
+    position: absolute;
+    display: inline-flex;
+    margin-top: -10px;
+}
+
+#class3updatetime {
+    position: absolute;
+    display: inline-flex;
+    width: 140px;
+    margin-left: 140px;
+}
+#class3update {
+position: absolute;
+display: block;
+top: 80px;
+margin-left: 320px;
+}
+
+#fuelupdate {
+    position: absolute;
+    display: block;
+    margin-top: 30px;
+}
+
+#fuelupdateform {
+    display: none;
+
+}
+
+#fuelupdatefields {
+    position: absolute;
+    display: block;
+    top: 80px;
+}
+
+#class3fuelunitmeasurement{
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 282px;
+    height:40px;
+    padding: 3px;
+
+}
+
+#class3fuelcapacity {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 30px;
+
+}
+#class3fuelonhand {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 60px;
+
+}
+
+#class3fuelnotes {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 90px;
+}
+
+#class3fueloutput {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 30px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color: gray;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+
+
+#class3fuelupdatebutton {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    top: 350px;
+    margin-left: 165px;
+    margin-top: 20px;
+    font-size: x-large;
+}
+
+#class3fuelrefreshbutton {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    top: 350px;
+    margin-left: 0px;
+    margin-top: 20px;
+    font-size: x-large;    
+}
+
+#supplyupdaterightborder {
+    position: absolute;
+    display: block;
+    top:-11px;
+    height:530px;
+    width: 10px;
+    background-color: rgb(146, 146, 146);
+    margin-left: 65.8%;
+}
+
+#class5updateheader {
+    position: absolute;
+    display: block;
+    top: -30px;
+    margin-left: 660px;
+    color: lightblue;
+}
+
+#class5timeheader {
+    position: absolute;
+    display: inline-flex;
+    margin-top: -10px;
+}
+
+#class5updatetime {
+    position: absolute;
+    display: inline-flex;
+    width: 140px;
+    margin-left: 140px;
+}
+#class5update {
+position: absolute;
+display: block;
+top: 80px;
+margin-left: 620px;
+}
+
+#ammoupdate {
+    position: absolute;
+    display: block;
+    margin-top: 30px;
+}
+
+#ammoupdateform {
+    display: none;
+
+}
+
+#ammoupdatefields {
+    position: absolute;
+    display: block;
+    top: 80px;
+}
+
+#class5ammounitmeasurement{
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 282px;
+    height:40px;
+    padding: 3px;
+
+}
+
+#class5ammocapacity {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 30px;
+
+}
+#class5ammoonhand {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 60px;
+
+}
+
+#class5ammonotes {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 21px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color:aqua;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 90px;
+}
+
+#class5ammooutput {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    height: 35px;
+    font-size: 30px;
+    font-weight: bolder;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color:aqua;
+    color: gray;
+    width: 270px;
+    height:30px;
+    padding: 3px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+
+
+#class5ammoupdatebutton {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    top: 350px;
+    margin-left: 165px;
+    margin-top: 20px;
+    font-size: x-large;
+}
+
+#class5ammorefreshbutton {
+    position: absolute;
+    display: block;
+    border-radius: 10px;
+    top: 350px;
+    margin-left: 0px;
+    margin-top: 20px;
+    font-size: x-large;    
+}
+
+#equipmentupdateform {
+    position: absolute;
+    display: none;
+    left: 5vw;
+    top:20vh;
+    width: 1280px;
+    height:1450px;
+    border: none;
+    box-shadow: 0 0 30px aqua;
+    border-radius: 25px;
+    background-color: rgb(51, 51, 51);
+    font-size: x-large;
+    padding-left: 15px;
+    z-index: 1;
+}
+
+#equipmentupdateform.active {
+    z-index: 2;
+    opacity: 1;
+}
+
+#equipmentupdateform h1{
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 0px;
+}
+
+#equipmentupdateform a {
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 45px;
+    color: aqua;
+}
+
+#closeequipmentupdateform {
+        position: absolute;
+        display:block;
+        height: 40px;
+        width: 40px;
+        right: .5%;
+        top: 1%;
+        border-color: gray;
+        background-color: lightgray;
+        font-size: xx-large;
+        color: darkgray;
+    }
+#closeequipmentupdateform:hover {
+        background-color: red;
+    }
+
+#equipment1strow {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#item1id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#equipment1strow input,
+#equipment1strow select,
+
+#equipment1strow button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#equipment1details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 220px;
+    top:-20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textequipment1details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeequipmentdetailsform1 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closeequipmentdetailsform1:hover {
+    background-color: red;
+}
+#equipmentdetailsupdatetime1 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondrow1 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#saveequipmentform1 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#equipmentupdatetime1 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#equipment2ndrow {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#item2id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#equipment2ndrow input,
+#equipment2ndrow select,
+
+#equipment2ndrow button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#equipment2details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 220px;
+    top:-20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+}
+
+#textequipment2details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeequipmentdetailsform2 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closeequipmentdetailsform2:hover {
+    background-color: red;
+}
+#equipmentdetailsupdatetime2 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondrow2 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#saveequipmentform2 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#equipmentupdatetime2 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#equipment3rdrow {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#item3id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#equipment3rdrow input,
+#equipment3rdrow select,
+
+#equipment3rdrow button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#equipment3details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 220px;
+    top:-20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+}
+
+#textequipment3details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeequipmentdetailsform3 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closeequipmentdetailsform3:hover {
+    background-color: red;
+}
+#equipmentdetailsupdatetime3 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondrow3 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#saveequipmentform3 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#equipmentupdatetime3 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#equipment4throw {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#item4id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#equipment4throw input,
+#equipment4throw select,
+
+#equipment4throw button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#equipment4details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 220px;
+    top:-20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+}
+
+#textequipment4details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeequipmentdetailsform4 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closeequipmentdetailsform4:hover {
+    background-color: red;
+}
+#equipmentdetailsupdatetime4 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondrow4 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#saveequipmentform4 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#equipmentupdatetime4 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#equipment5throw {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#item5id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#equipment5throw input,
+#equipment5throw select,
+
+#equipment5throw button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#equipment5details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 220px;
+    top:-20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+}
+
+#textequipment5details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeequipmentdetailsform5 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closeequipmentdetailsform5:hover {
+    background-color: red;
+}
+#equipmentdetailsupdatetime5 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondrow5 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#saveequipmentform5 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#equipmentupdatetime5 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#equipment6throw {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#item6id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#equipment6throw input,
+#equipment6throw select,
+
+#equipment6throw button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#equipment6details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 220px;
+    top:-20px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+}
+
+#textequipment6details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closeequipmentdetailsform6 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closeequipmentdetailsform6:hover {
+    background-color: red;
+}
+#equipmentdetailsupdatetime6 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondrow6 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#saveequipmentform6 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#equipmentupdatetime6 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#personnelupdateform {
+    position: absolute;
+    display: none;
+    left: 5vw;
+    top:20vh;
+    width: 1545px;
+    height:1450px;
+    border: none;
+    box-shadow: 0 0 30px aqua;
+    border-radius: 25px;
+    background-color: rgb(51, 51, 51);
+    font-size: x-large;
+    padding-left: 15px;
+    z-index: 1;
+}
+
+#personnelupdateform.active {
+    z-index: 2;
+    opacity: 1;
+}
+
+#personnelupdateform h1{
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 0px;
+}
+
+#personnelupdateform a {
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 45px;
+    color: aqua;
+}
+
+#closepersonnelupdateform {
+        position: absolute;
+        display:block;
+        height: 40px;
+        width: 40px;
+        right: .5%;
+        top: 1%;
+        border-color: gray;
+        background-color: lightgray;
+        font-size: xx-large;
+        color: darkgray;
+    }
+#closepersonnelupdateform:hover {
+        background-color: red;
+    }
+
+#personnel1strow {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#person1id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#personnel1strow input,
+#personnel1strow select,
+
+#personnel1strow button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#personnel1details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 980px;
+    top: -10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textpersonnel1details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closepersonneldetailsform1 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closepersonneldetailsform1:hover {
+    background-color: red;
+}
+#personneldetailsupdatetime1 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondprow1 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#savepersonnelform1 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#personnelupdatetime1 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#personnel2ndrow {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#person2id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#personnel2ndrow input,
+#personnel2ndrow select,
+
+#personnel2ndrow button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#personnel2details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 980px;
+    top: -10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textpersonnel2details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closepersonneldetailsform2 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closepersonneldetailsform2:hover {
+    background-color: red;
+}
+#personneldetailsupdatetime2 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondprow2 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#savepersonnelform2 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#personnelupdatetime2 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#personnel3rdrow {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#person3id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#personnel3rdrow input,
+#personnel3rdrow select,
+
+#personnel3rdrow button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#personnel3details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 980px;
+    top: -10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textpersonnel3details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closepersonneldetailsform3 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closepersonneldetailsform3:hover {
+    background-color: red;
+}
+#personneldetailsupdatetime3 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondprow3 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#savepersonnelform3 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#personnelupdatetime3 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#personnel4throw {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#person4id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#personnel4throw input,
+#personnel4throw select,
+
+#personnel4throw button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#personnel4details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 980px;
+    top: -10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textpersonnel4details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closepersonneldetailsform4 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closepersonneldetailsform4:hover {
+    background-color: red;
+}
+#personneldetailsupdatetime4 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondprow4 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#savepersonnelform4 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#personnelupdatetime4 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#personnel5throw {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#person5id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#personnel5throw input,
+#personnel5throw select,
+
+#personnel5throw button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#personnel5details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 980px;
+    top: -10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textpersonnel5details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closepersonneldetailsform5 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closepersonneldetailsform5:hover {
+    background-color: red;
+}
+#personneldetailsupdatetime5 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondprow5 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#savepersonnelform5 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#personnelupdatetime5 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#personnel6throw {
+    position: relative;
+    display: block;
+    width: 101%;
+    left: -1.1%;
+    top: 0px;
+    background-color: gray;
+}
+
+#person6id {
+    position: relative;
+    display: block;
+    top: 60px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: yellow;
+    background-color: black;
+    border-radius: 50% 50%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: yellow;
+
+}
+#personnel6throw input,
+#personnel6throw select,
+
+#personnel6throw button {
+    position:relative;
+    display: inline-block; 
+    left: 70px;
+    top: -20px;
+    margin-right: 30px;
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-weight: bold;
+    font-size: x-large;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+#personnel6details {
+    position: relative;
+    display: none;
+    width: 330px;
+    height:400px;
+    background-color: black;
+    left: 980px;
+    top: -10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 3px;
+    z-index: 2;
+}
+
+#textpersonnel6details {
+    position: relative;
+    display: block;
+    width: 323px;
+    left: 0px;
+    top:60px;
+    height:300px;
+    background-color: rgb(59, 59, 59);
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#closepersonneldetailsform6 {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    top:10px;
+    left: 280px;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closepersonneldetailsform6:hover {
+    background-color: red;
+}
+#personneldetailsupdatetime6 {
+    position: relative;
+    display: inline-flex;
+    top:30px;
+    left: 20px;
+}
+
+#secondprow6 {
+    position: relative;
+    display: inline-flex;
+    left: 0px;
+    padding-top: 20px;
+}
+
+#savepersonnelform6 {
+    border-color: lime;
+    border-width: 5px;
+    color: lime;
+    background-color: lime;
+}
+
+#personnelupdatetime6 {
+    position: relative;
+    display: inline-flex;
+    left: 60px;
+    padding-top: 20px;
+    font-size: xx-large;
+    top: -25px;
+}
+
+#requestform {
+    position: relative;
+    display: none;
+    top: 38vh;
+    text-align: center;
+    width:500px;
+    height: 700px;
+    padding: 1%;
+    padding-bottom: 2%;
+    left: 79%;
+    border-style:inset;
+    border-width: 6px;
+    border-color: lime;
+    color: lightblue;
+    font-family: sans-serif;
+    font-size:x-large;
+    border-radius: 20px;
+    background-color: rgb(46, 46, 46);
+    align-items: center;
+}
+
+#closerequestform {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: 1%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#closerequestform:hover {
+    background-color: red;
+}
+
+#requestform input {
+    display: block;
+    width: 500px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#requestform select {
+    width: 500px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#requestform button:hover {
+    background-color: gray;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#requestcontainer {
+    position: absolute;
+    display: block;
+    text-align: left;
+    top: 20%;
+    margin-left: 20px;
+}
+
+#arequestdropdown {
+    position: absolute;
+    display: block;
+    right: 0%;
+    top: 12%;
+    width: 70%;
+    height: 5%;
+    margin-right: 5%;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+    text-align: left;
+    font-weight: bold;
+}
+
+#myunitdropdownmaintenance {
+    position: absolute;
+    right: 0%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+#unitrequestdropdownmaintenance {
+    position: absolute;
+    right: 0%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+#requesttypemaintenance {
+    position: absolute;
+    right: 0%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+#locationmaintenance {
+    position: absolute;
+    right: 0%;
+    width: 20%;
+    margin-left: 40px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: x-large;
+
+}
+
+#timemaintenance {
+    position: absolute;
+    right: 0%;
+    top: 56.5%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+#detailsmaintenance {
+    position: absolute;
+    top: 70.5%;
+    right: 0%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+
+#attachmaintenance {
+    right: 0%;
+    top: 53%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+#submitmaintenance {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: lime;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+    right: 15%;
+    bottom: -5%;
+}
+
+#refreshmaintenance {
+    position: absolute;
+    right: 55%;
+    bottom: -5%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(251, 255, 0);
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#arequestmaintenanceform {
+    display: block;
+}
+
+#adashboard {
+    position: absolute;
+    display: none;
+    height:1000px;
+    width:1500px;
+    top: 30vh;
+    left: 55%;
+    border: none;
+    box-shadow: 0 0 30px red;
+    border-radius: 25px;
+    background-color: rgb(19, 19, 19);
+    z-index: 1;
+}
+
+#adashboard.active {
+    z-index: 2;
+    opacity: 1;
+}
+
+#exitdashboard {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: 1%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#exitdashboard:hover {
+    background-color: red;
+}
+
+#adashboardtitle {
+    position: absolute;
+    display: block;
+    top:-3%;
+    left:28%;
+    color:aliceblue;
+    font-size: 30px;
+}
+#suppliesdashboardtitle {
+    position: absolute;
+    display: block;
+    top:8%;
+    left:5px;
+}
+
+#redmarker {
+    position: absolute;
+    display: block;
+    height:0px;
+    width:33%;
+    bottom: 370px;
+    left: 0;
+    border-style:dashed;
+    border-width: 5px;
+    border-color: rgb(255, 0, 0);
+}
+
+#rednumber {
+    position: absolute;
+    display: block;
+    top: -60px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    width: 60px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    left: -2px;
+}
+
+#yellowmarker {
+    position: absolute;
+    display: block;
+    height:0px;
+    width:33%;
+    bottom: 550px;
+    left: 0;
+    border-style:dashed;
+    border-width: 5px;
+    border-color: yellow;
+}
+
+#yellownumber {
+    position: absolute;
+    display: block;
+    top: -60px;
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    width: 60px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    left: -2px;
+}
+
+#greenmarker {
+    position: absolute;
+    display: block;
+    height:0px;
+    width:33%;
+    bottom: 700px;
+    left: 0;
+    border-style:dashed;
+    border-width: 5px;
+    border-color: lime;
+}
+
+#greennumber {
+    position: absolute;
+    display: block;
+    top: -60px;
+    color: lime;
+    font-size: 30px;
+    font-weight: bold;
+    width: 60px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+    left: -2px;
+}
+
+
+#class1barcontainer {
+    position: absolute;
+    display: block;
+    height:600px;
+    width:100px;
+    bottom: 19%;
+    left: 4%;
+    background-color: none;
+}
+#class1bar {
+    position:absolute;
+    display:block;
+    height:1%;
+    width:110px;
+    bottom: 0%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(104, 104, 104);
+}
+
+#class1output2 {
+    position:absolute;
+    display:block;
+    color: rgb(255, 255, 255);
+    bottom: 100%;
+    text-align:left;
+    font-size: xx-large;
+}
+
+#class1update2 {
+    position:absolute;
+    display:block;
+    left: 60px;
+    top:85%;
+}
+
+#class1dashboardtitle {
+    position:absolute;
+    display:block;
+    margin-top: -45px;
+    width: 108px;
+}
+
+#class1updatetime2 {
+    position:absolute;
+    display:block;
+    margin-top: 30px;
+    width: 108px;
+    font-size: x-large;
+}
+
+#class1dashboardbutton {
+    position:absolute;
+    display:block;
+    margin-top: 90px;
+    width: 108px;
+    font-size: larger;
+    height: 50px;
+}
+
+#class3barcontainer {
+    position: absolute;
+    display: block;
+    height:600px;
+    width:100px;
+    bottom: 40px;
+    left: 155px;
+    background-color: none;
+}
+#class3bar {
+    position:absolute;
+    display:block;
+    height:1%;
+    width:110px;
+    bottom: 0%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(104, 104, 104);
+}
+
+#class3output2 {
+    position:absolute;
+    display:block;
+    color: rgb(255, 255, 255);
+    bottom: 100%;
+    text-align:left;
+    font-size: xx-large;
+}
+
+#class3update2 {
+    position:absolute;
+    display:block;
+    left: 155px;
+    top:85%;
+}
+
+#class3dashboardtitle {
+    position:absolute;
+    display:block;
+    margin-top: -45px;
+    width: 122px;
+}
+
+#class3updatetime2 {
+    position:absolute;
+    display:block;
+    margin-top: 30px;
+    width: 108px;
+    font-size: x-large;
+}
+
+#class3dashboardbutton {
+    position:absolute;
+    display:block;
+    margin-top: 90px;
+    width: 108px;
+    font-size: larger;
+    height: 50px;
+}
+
+#class5barcontainer {
+    position: absolute;
+    display: block;
+    height:600px;
+    width:100px;
+    bottom: 40px;
+    left: 310px;
+    background-color: none;
+}
+#class5bar {
+    position:absolute;
+    display:block;
+    height:1%;
+    width:110px;
+    bottom: 0%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(104, 104, 104);
+}
+
+#class5output2 {
+    position:absolute;
+    display:block;
+    color: rgb(255, 255, 255);
+    bottom: 100%;
+    text-align:left;
+    font-size: xx-large;
+}
+
+#class5update2 {
+    position:absolute;
+    display:block;
+    left: 310px;
+    top:85%;
+}
+
+#class5dashboardtitle {
+    position:absolute;
+    display:block;
+    margin-top: -45px;
+    width: 122px;
+}
+
+#class5updatetime2 {
+    position:absolute;
+    display:block;
+    margin-top: 30px;
+    width: 108px;
+    font-size: x-large;
+}
+
+#class5dashboardbutton {
+    position:absolute;
+    display:block;
+    margin-top: 90px;
+    width: 108px;
+    font-size: larger;
+    height: 50px;
+}
+
+#missionessentialequipment {
+    position: absolute;
+    display: block;
+    margin-top: 90px;
+    width: 32.5%;
+    height: 90%;
+    left: 33%;
+}
+
+#missionessentialequipment h1 {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: -10px;
+    left: 15px;
+}
+
+#missionessentialequipment h2 {
+    position: relative;
+    display:inline-flex;
+    top:7%;
+    margin-right: 155px;
+    color: aqua;
+}
+
+#meesubheaders {
+    position: relative;
+    display: absolute;
+    left: 40px;
+}
+
+#meeborder1 {
+    position: relative;
+    display: absolute;
+    height: 65.5%;
+    width: 0;
+    top: 5%;
+    left: 51%;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 5px;
+}
+
+#meeborder2 {
+    position: relative;
+    display: absolute;
+    height: 0;
+    width: 100%;
+    top: -62%;
+    left: 0%;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 5px;
+}
+
+#item1{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -61%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#item1nameoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#item1statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#item1details {
+    position: relative;
+    display: none;
+    top: -450%;
+    left: 15px;
+    width: 99%;
+    height: 1450%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#item1statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#item1detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#item1detailsclose:hover {
+    background-color: red;
+}
+
+#spanitem1num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1num {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem1tamcn {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1tamcn {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem1name {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1nam {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem1serial {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1serial {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem1status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1status {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem1notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#item1notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanitem1updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item1updated {
+    position: relative;
+    color: yellow;
+}
+
+#item2{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -55%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#item2nameoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#item2statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#item2details {
+    position: relative;
+    display: none;
+    top: -675%;
+    left: 15px;
+    width: 99%;
+    height: 1450%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#item2statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#item2detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#item2detailsclose:hover {
+    background-color: red;
+}
+
+#spanitem2num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2num {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem2tamcn {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2tamcn {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem2name {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2nam {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem2serial {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2serial {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem2status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2status {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem2notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#item2notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanitem2updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item2updated {
+    position: relative;
+    color: yellow;
+}
+
+#item3{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -49%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#item3nameoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#item3statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#item3details {
+    position: relative;
+    display: none;
+    top: -900%;
+    left: 15px;
+    width: 99%;
+    height: 1450%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#item3statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#item3detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#item3detailsclose:hover {
+    background-color: red;
+}
+
+#spanitem3num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3num {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem3tamcn {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3tamcn {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem3name {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3nam {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem3serial {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3serial {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem3status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3status {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem3notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#item3notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanitem3updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item3updated {
+    position: relative;
+    color: yellow;
+}
+
+#item4{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -43%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#item4nameoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    border-radius: 15px;
+}
+
+#item4statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+}
+
+#item4details {
+    position: relative;
+    display: none;
+    top: -1105%;
+    left: 15px;
+    width: 99%;
+    height: 1450%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#item4statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#item4detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#item4detailsclose:hover {
+    background-color: red;
+}
+
+#spanitem4num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4num {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem4tamcn {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4tamcn {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem4name {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4nam {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem4serial {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4serial {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem4status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4status {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem4notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#item4notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanitem4updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item4updated {
+    position: relative;
+    color: yellow;
+}
+
+#item5{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -37%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#item5nameoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    border-radius: 15px;
+}
+
+#item5statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+}
+
+#item5details {
+    position: relative;
+    display: none;
+    top: -1320%;
+    left: 15px;
+    width: 99%;
+    height: 1450%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 1;
+}
+
+#item5statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#item5detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#item5detailsclose:hover {
+    background-color: red;
+}
+
+#spanitem5num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5num {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem5tamcn {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5tamcn {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem5name {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5nam {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem5serial {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5serial {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem5status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5status {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem2notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#item5notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanitem5updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item5updated {
+    position: relative;
+    color: yellow;
+}
+
+#item6{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -31%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#item6nameoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+    padding-top: 15px;
+    border-radius: 15px;
+}
+
+#item6statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+}
+
+#item6details {
+    position: relative;
+    display: none;
+    top: -1540%;
+    left: 15px;
+    width: 99%;
+    height: 1450%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 1;
+}
+
+#item6statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#item6detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#item6detailsclose:hover {
+    background-color: red;
+}
+
+#spanitem6num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6num {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem6tamcn {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6tamcn {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem6name {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6nam {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem6serial {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6serial {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem6status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6status {
+    position: relative;
+    color: yellow;
+}
+
+#spanitem6notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#item6notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanitem6updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#item6updated {
+    position: relative;
+    color: yellow;
+}
+
+#personnelstatistics {
+    position: absolute;
+    display: block;
+    margin-top: 90px;
+    width: 32.5%;
+    height: 90%;
+    left: 66%;
+}
+
+#personnelstatistics h1 {
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: -10px;
+    left: 15px;
+}
+
+#personnelstatistics h2 {
+    position: relative;
+    display:inline-flex;
+    top:7%;
+    margin-right: 120px;
+    color: aqua;
+}
+
+#personnelsubheaders {
+    position: relative;
+    display: absolute;
+    left: 40px;
+}
+
+#personnelborder1 {
+    position: relative;
+    display: absolute;
+    height: 65.5%;
+    width: 0;
+    top: 5%;
+    left: 51%;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 5px;
+}
+
+#personnelborder2 {
+    position: relative;
+    display: absolute;
+    height: 0;
+    width: 100%;
+    top: -62%;
+    left: 0%;
+    border-style: solid;
+    border-color: aqua;
+    border-width: 5px;
+}
+#person1{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -61%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#person1billetoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#person1statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#person1details {
+    position: relative;
+    display: none;
+    top: -450%;
+    left: 18px;
+    width: 100%;
+    height: 1500%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#person1statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#person1detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#person1detailsclose:hover {
+    background-color: red;
+}
+
+#spanperson1num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1num {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson1rank {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1rank {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson1lname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1lname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson1fname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1fname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson1billet {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1billet {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson1status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1status {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson1notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#person1notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanperson1updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person1updated {
+    position: relative;
+    color: yellow;
+}
+
+#person2{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -55%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#person2billetoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#person2statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#person2details {
+    position: relative;
+    display: none;
+    top: -650%;
+    left: 18px;
+    width: 100%;
+    height: 1500%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#person2statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#person2detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#person2detailsclose:hover {
+    background-color: red;
+}
+
+#spanperson2num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2num {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson2rank {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2rank {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson2lname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2lname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson2fname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2fname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson2billet {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2billet {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson2status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2status {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson2notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#person2notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanperson2updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person2updated {
+    position: relative;
+    color: yellow;
+}
+
+#person3{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -49%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#person3billetoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#person3statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#person3details {
+    position: relative;
+    display: none;
+    top: -850%;
+    left: 18px;
+    width: 100%;
+    height: 1500%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#person3statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#person3detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#person3detailsclose:hover {
+    background-color: red;
+}
+
+#spanperson3num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3num {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson3rank {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3rank {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson3lname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3lname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson3fname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3fname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson3billet {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3billet {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson3status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3status {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson3notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#person3notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanperson3updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person3updated {
+    position: relative;
+    color: yellow;
+}
+
+#person4{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -43%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#person4billetoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#person4statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#person4details {
+    position: relative;
+    display: none;
+    top: -1100%;
+    left: 18px;
+    width: 100%;
+    height: 1500%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#person4statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#person4detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#person4detailsclose:hover {
+    background-color: red;
+}
+
+#spanperson4num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4num {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson4rank {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4rank {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson4lname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4lname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson4fname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4fname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson4billet {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4billet {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson4status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4status {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson4notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#person4notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanperson4updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person4updated {
+    position: relative;
+    color: yellow;
+}
+
+#person5{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -37%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#person5billetoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#person5statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#person5details {
+    position: relative;
+    display: none;
+    top: -1300%;
+    left: 18px;
+    width: 100%;
+    height: 1500%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#person5statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#person5detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#person5detailsclose:hover {
+    background-color: red;
+}
+
+#spanperson5num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5num {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson5rank {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5rank {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson5lname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5lname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson5fname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5fname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson5billet {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5billet {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson5status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5status {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson5notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#person5notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanperson5updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person5updated {
+    position: relative;
+    color: yellow;
+}
+
+#person6{
+    position: relative;
+    display: absolute;
+    width: 100%;
+    height: 5%;
+    top: -31%;  
+    right: 2%; 
+    text-align: center;
+    font-size: XX-large;
+    font-weight: bold;
+}
+
+#person6billetoutput {
+    position: relative;
+    display: absolute;
+    left: 25px;
+    width: 45%;
+    height: 100%;
+
+    padding-top: 15px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#person6statusoutput {
+    position: relative;
+    display: absolute;
+    left: 280px;
+    width: 42%;
+    height: 100%;
+    border-style: solid;
+    border-color: gray;
+    padding-top: 15px;
+    border-radius: 15px; 
+    border-width:5px;
+    top: -150%;
+    z-index: 0;
+}
+
+#person6details {
+    position: relative;
+    display: none;
+    top: -1500%;
+    left: 18px;
+    width: 100%;
+    height: 1500%;
+    background-color: black;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 15px;
+    font-size: large;
+    z-index: 2;
+}
+
+#person6statusoutput:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+#person6detailsclose {
+    position: absolute;
+    display:block;
+    height: 40px;
+    width: 40px;
+    right: .75%;
+    top: 1%;
+    border-color: gray;
+    background-color: lightgray;
+    font-size: xx-large;
+    color: darkgray;
+}
+
+#person6detailsclose:hover {
+    background-color: red;
+}
+
+#spanperson6num {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6num {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson6rank {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6rank {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson6lname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6lname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson6fname {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6fname {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson6billet {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6billet {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson6status {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6status {
+    position: relative;
+    color: yellow;
+}
+
+#spanperson6notes {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6notes {
+    position: relative;
+    color: yellow;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+    font-size: 20px;
+}
+
+#person6notes::placeholder {
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#spanperson6updated {
+    position: absolute;
+    display:flex;
+    left: 20px;
+}
+
+#person6updated {
+    position: relative;
+    color: yellow;
+}
+
+#dashboardtopborder {
+    position: absolute;
+    display: block;
+    height:0px;
+    width:1490px;
+    bottom: 900px;
+    left: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170);
+}
+#dashboardleftborder {
+    position: absolute;
+    display: block;
+    height:900px;
+    bottom: 0vh;
+    left: 33%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170);
+}
+
+#dashboardrightborder {
+    position: absolute;
+    display: block;
+    height:900px;
+    bottom: 0vh;
+    left: 66%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170);
+}
+
+#dashboardbottomborder {
+    position: absolute;
+    display: block;
+    height:0px;
+    width:1490px;
+    bottom: 180px;
+    left: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170);
+}
+
+#mobileversion {
+    display: none;
+}
+
+#hamburger {
+    position: absolute;
+    display: block;
+    height: 85px;
+    width: 90px;
+}
+
+#hamburger:hover {
+cursor: pointer;
+content: lime;
+}
+
+#bar1 {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    height: 15px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#bar2 {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    height: 15px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#bar3 {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    height: 15px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#minimenu {
+    display:none;
+    bottom: 0px;
+    text-align: center;
+    font-size: 100px;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: gray;
+}
+
+#mobilerequests {
+    width: 100vw;
+    text-align: center;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+}
+#mobilerequests:hover {
+    color: lime;
+    cursor: pointer;
+}
+
+#mobilereports {
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+#mobilereports:hover {
+    color: lime;
+    cursor: pointer;
+}
+
+#mobiledashboard {
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#mobiledashboard:hover {
+    color: lime;
+    cursor: pointer;
+}
+
+#mobiletools {
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+#mobiletools:hover {
+    color: lime;
+    cursor: pointer;
+}
+
+#mobilelogo {
+    display: block;
+    position:absolute;
+    font-size: 100px;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: lime;
+    height: 7vh;
+    right: 30px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 2320px) {
+    #desktopversion {
+        display: none;
+    }
+
+    #mobileversion {
+        display: block;
+    }
+};

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG PLUG IN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+</head>
+<body>
+<container id="desktopversion">
+    <div id="logo"><img src="logo.PNG" width="300px"></div> 
+            <select id="chooseunit" onchange="displayunitspecificoptions()">
+                <option value="" disabled selected>SELECT UNIT</option>
+                <option value="option1">UNIT A</option>
+            </select>
+        <div id="topbar">
+            <div id="closetopbar" onclick="closetopbar1()">X</div>
+            <span id="topbaritems">  
+                        <select id="updateoptions" onchange="displayreports()">
+                            <option value="" disabled selected>REPORTS</option>
+                            <option value="option1">SUPPLY</option>
+                            <option value="option2">EQUIPMENT</option>
+                            <option value="option3">PERSONNEL</option>
+                        </select>
+                        <select id="requests">
+                            <option value="" disabled selected>REQUESTS</option>
+                            <option value="option1">SUPPLY</option>
+                            <option value="option2">EQUIPMENT</option>
+                            <option value="option3">PERSONNEL</option>
+                        </select>
+                        <select id="tools">
+                            <option value="" disabled selected>TOOLS</option>
+                            <option value="option1">LOG INTEL</option>
+                            <option value="option2">TO-DO TRACKER</option>
+                            <option value="option3">CONSUMPTION</option>
+                        </select>
+                        <div id="atopdashboard" onclick="showdashboard()">DASHBOARD</div>
+            </span>
+        </div>
+    <container id="unitacontainer">
+        <div id="closeunitabutton" onclick="closeunitabuttondiv()">X</div>
+            <button id="unitadashboard" onclick="showdashboard()"><div id="aviewlabel"><i class="fa fa-bar-chart" aria-hidden="true"></i></div></button>
+            <button id="unitareports" onclick="showinputforms()"><div id="ainputlabel"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div></button>
+                <div id="closereportsdropdown" onclick="closereportsdiv()">X</div>
+                <select id="inputformslist" onchange="displayreports1()">
+                    <option value="" disabled selected>REPORTS</option>
+                    <option value="option1">SUPPLY</option>
+                    <option value="option2">EQUIPMENT</option>
+                    <option value="option3">PERSONNEL</option>
+                </select>
+            <button id="unitatools" onclick="showtools()"><div id="atoolslabel"><i class="fa fa-wrench" aria-hidden="true"></i></div></button>
+            <div id="closetoolsdropdown" onclick="closetoolsdiv()">X</div>
+            <select id="toolsformslist" onchange="displaytools1()">
+                <option value="" disabled selected>TOOLS</option>
+                <option value="option1">LOG INTEL</option>
+                <option value="option2">TO-DO TRACKER</option>
+                <option value="option3">CONSUMPTION</option>
+            </select>
+            <button id="unitarequests" onclick="showrequests()"><div id="arequestslabel"><i class="fa fa-envelope-o" aria-hidden="true"></i></div></button>
+            <div id="unitabackgroundcircle"></div>
+            <div id="unitabox" onclick="trackbuttons()"><a><br><br>UNIT A</a></div>
+            <div id="aclass1circle"><a>I</a></div>
+            <div id="aclass3circle"><a>III</a></div>
+            <div id="aclass5circle"><a>V</a></div>    
+    </container>
+                <div class="front-div" id="supplyupdateform">
+                    <div id="supplyupdateheader"><h1>CRITICAL SUPPLIES UPDATE FORM</h1></div>
+                    <button id="closesupplyupdateform" onclick="closesupplyupdateform()">X</button>
+                <container id="criticalsuppliescontainer">
+                    <div id="criticalsuppliestopborder"></div>
+                    <div id="class1updateheader"><h1>CLASS I</h1></div>
+                    <div id="class1update">
+                        <div id="class1timeheader">
+                        <a><b>UPDATED:</b></a> 
+                        <span id="class1updatetime">--:--:--</span>
+                        </div>
+                        <button id="foodupdate" onclick= "showfoodupdateform ()">FOOD</button>
+                        <div id="foodupdateform">
+                            <div id="foodupdatefields">
+                                <select id="class1foodunitmeasurement">
+                                    <option id="select">1. MEASUREMENT</option>
+                                    <option id="gallons">MREs</option>
+                                    <option id="liters">DAY OF SUPPLY</option>
+                                    <option id="quarts">FIRST-STRIKEs</option>
+                                </select><br>
+                                <input type="number" id="class1foodcapacity" placeholder="2. ENTER MAX CAPACITY"><br>
+                                <input type="number" id="class1foodonhand" placeholder="3. ENTER ON-HAND"><br>
+                                <input type="text" id="class1foodnotes" placeholder="4. TYPE NOTES"><br>
+                            </div>
+                        </div>
+                        <button id="waterupdate" onclick="showwaterupdateform();">WATER</button><br>
+                        <div id="waterupdateform">
+                            <div id="waterupdatefields">
+                                <select id="class1waterunitmeasurement">
+                                    <option id="select">1. MEASUREMENT</option>
+                                    <option id="gallons">GALLONS</option>
+                                    <option id="liters">LITERS</option>
+                                    <option id="quarts">QUARTS</option>
+                                </select><br>
+                                <input type="number" id="class1watercapacity" placeholder="2. ENTER MAX CAPACITY"><br>
+                                <input type="number" id="class1wateronhand" placeholder="3. ENTER ON-HAND"><br>
+                                <input type="text" id="class1waternotes" placeholder="4. TYPE NOTES"><br>
+                            </div>
+                        </div>
+                        <div id="class1output"><a>CLICK "UPDATE"</a></div>
+                        <button id="class1updatebutton" onclick="updateclass1CircleColor(); updateclass1Time();">UPDATE</button>
+                        <button id="class1refreshbutton">REFRESH</button>
+                    </div>
+                    <div id="supplyupdateleftborder"></div>
+                    <div id="class3updateheader"><h1>CLASS 3</h1></div>
+                    <div id="class3update">
+                        <div id="class3timeheader">
+                        <a><b>UPDATED:</b></a> 
+                        <span id="class3updatetime">--:--:--</span>
+                        </div>
+                        <button id="fuelupdate" onclick= "showfuelupdateform ()">FUEL</button>
+                        <div id="fuelupdateform">
+                            <div id="fuelupdatefields">
+                                <select id="class3fuelunitmeasurement">
+                                    <option id="select">1. MEASUREMENT</option>
+                                    <option id="gallons">GALLONS</option>
+                                    <option id="liters">POUNDS</option>
+                                </select><br>
+                                <input type="number" id="class3fuelcapacity" placeholder="2. ENTER MAX CAPACITY"><br>
+                                <input type="number" id="class3fuelonhand" placeholder="3. ENTER ON-HAND"><br>
+                                <input type="text" id="class3fuelnotes" placeholder="4. TYPE NOTES"><br>
+                                <div id="class3fueloutput"><a>CLICK "UPDATE"</a></div>
+                            </div>
+                            <button id="class3fuelupdatebutton" onclick="updateclass3CircleColor(); updateclass3Time();">UPDATE</button>
+                            <button id="class3fuelrefreshbutton">REFRESH</button>
+                        </div>
+                    </div>
+                    <div id="supplyupdaterightborder"></div>
+                    <div id="class5updateheader"><h1>CLASS 5</h1></div>
+                    <div id="class5update">
+                        <div id="class5timeheader">
+                        <a><b>UPDATED:</b></a> 
+                        <span id="class5updatetime">--:--:--</span>
+                        </div>
+                        <button id="ammoupdate" onclick= "showammoupdateform ()">AMMO</button>
+                        <div id="ammoupdateform">
+                            <div id="ammoupdatefields">
+                                <select id="class5ammounitmeasurement">
+                                    <option id="select">1. DODIC</option>
+                                    <option id="9">9MM</option>
+                                    <option id="556">5.56MM</option>
+                                    <option id="762">7.62MM</option>
+                                    <option id="30m">30MM</option>
+                                    <option id="30c">30 CAL</option>
+                                    <option id="50c">50 CAL</option>
+                                    <option id="81m">81MM</option>
+                                    <option id="155m">155MM</option>
+                                </select><br>
+                                <input type="number" id="class5ammocapacity" placeholder="2. ENTER MAX CAPACITY"><br>
+                                <input type="number" id="class5ammoonhand" placeholder="3. ENTER ON-HAND"><br>
+                                <input type="text" id="class5ammonotes" placeholder="4. TYPE NOTES"><br>
+                                <div id="class5ammooutput"><a>CLICK "UPDATE"</a></div>
+                            </div>
+                            <button id="class5ammoupdatebutton" onclick="updateclass5CircleColor(); updateclass5Time();">UPDATE</button>
+                            <button id="class5ammorefreshbutton">REFRESH</button>
+                        </div>
+                    </div>
+                </container>
+                </div>
+                <div class="front-div" id="equipmentupdateform">
+                    <button id="closeequipmentupdateform" onclick="closeequipmentupdateform()">X</button>
+                    <div id="equipmentupdateheader"><h1>ESSENTIAL EQUIPMENT UPDATE FORM</h1></div>
+                    <div id="equipmenttopborder"></div>
+                    <div id="equipment1strow">
+                        <div id="item1id">1</div>
+                        <input id="tamcnid1" placeholder="1. TAMCN">
+                        <input id="item1name" placeholder="2. NAME OF ITEM">
+                        <input id="serial1" placeholder="3. SERIAL #">
+                        <span id="secondrow1">
+                        <label for="optionSelector1"></label>
+                        <select id="optionSelector1" onchange="displaySelectedText1()">
+                            <option value="" disabled selected>4. STATUS</option>
+                            <option value="option1">OPERATIONAL</option>
+                            <option value="option2">DEGRADED</option>
+                            <option value="option3">DEADLINED</option>
+                        </select>
+                        <button id="equipmentinfo1" onclick="openequipmentdetailsform1()">5. NOTES</button>
+                        <button id="saveequipmentform1" onclick="updateequipment1Time(); updateitem1name(); updatetamcn1(); updateserial1(); updatenotes1();">6. SAVE</button>
+                        <span id="equipmentupdatetime1">--:--:--</span>
+                        </span>
+                    </div>
+                        <div id="equipment1details">
+                            <textarea name="none" id="textequipment1details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                            <button id="closeequipmentdetailsform1" onclick="closeequipmentdetailsform1()">X</button>
+                        </div>
+                        <div id="equipment2ndrow">
+                            <div id="item2id">2</div>
+                            <input id="tamcnid2" placeholder="1. TAMCN">
+                            <input id="item2name" placeholder="2. NAME OF ITEM">
+                            <input id="serial2" placeholder="3. SERIAL #">
+                            <span id="secondrow2">
+                            <label for="optionSelector2"></label>
+                            <select id="optionSelector2" onchange="displaySelectedText2()">
+                                <option value="" disabled selected>4. STATUS</option>
+                                <option value="option1">OPERATIONAL</option>
+                                <option value="option2">DEGRADED</option>
+                                <option value="option3">DEADLINED</option>
+                            </select>
+                            <button id="equipmentinfo2" onclick="openequipmentdetailsform2()">5. NOTES</button>
+                            <button id="saveequipmentform2" onclick="updateequipment2Time(); updateitem2name(); updatetamcn2(); updateserial2(); updatenotes2();">6. SAVE</button>
+                            <span id="equipmentupdatetime2">--:--:--</span>
+                            </span>
+                        </div>
+                            <div id="equipment2details">
+                                <textarea name="none" id="textequipment2details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                <button id="closeequipmentdetailsform2" onclick="closeequipmentdetailsform2()">X</button>
+                            </div>
+                            <div id="equipment3rdrow">
+                                <div id="item3id">3</div>
+                                <input id="tamcnid3" placeholder="1. TAMCN">
+                                <input id="item3name" placeholder="2. NAME OF ITEM">
+                                <input id="serial3" placeholder="3. SERIAL #">
+                                <span id="secondrow3">
+                                <label for="optionSelector3"></label>
+                                <select id="optionSelector3" onchange="displaySelectedText3()">
+                                    <option value="" disabled selected>4. STATUS</option>
+                                    <option value="option1">OPERATIONAL</option>
+                                    <option value="option2">DEGRADED</option>
+                                    <option value="option3">DEADLINED</option>
+                                </select>
+                                <button id="equipmentinfo3" onclick="openequipmentdetailsform3()">5. NOTES</button>
+                                <button id="saveequipmentform3" onclick="updateequipment3Time(); updateitem3name(); updatetamcn3(); updateserial3(); updatenotes3();">6. SAVE</button>
+                                <span id="equipmentupdatetime3">--:--:--</span>
+                                </span>
+                            </div>
+                                <div id="equipment3details">
+                                    <textarea name="none" id="textequipment3details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                    <button id="closeequipmentdetailsform3" onclick="closeequipmentdetailsform3()">X</button>
+                                </div>
+                                <div id="equipment4throw">
+                                    <div id="item4id">4</div>
+                                    <input id="tamcnid4" placeholder="1. TAMCN">
+                                    <input id="item4name" placeholder="2. NAME OF ITEM">
+                                    <input id="serial4" placeholder="3. SERIAL #">
+                                    <span id="secondrow4">
+                                    <label for="optionSelector4"></label>
+                                    <select id="optionSelector4" onchange="displaySelectedText4()">
+                                        <option value="" disabled selected>4. STATUS</option>
+                                        <option value="option1">OPERATIONAL</option>
+                                        <option value="option2">DEGRADED</option>
+                                        <option value="option3">DEADLINED</option>
+                                    </select>
+                                    <button id="equipmentinfo4" onclick="openequipmentdetailsform4()">5. NOTES</button>
+                                    <button id="saveequipmentform4" onclick="updateequipment4Time(); updateitem4name(); updatetamcn4(); updateserial4(); updatenotes4();">6. SAVE</button>
+                                    <span id="equipmentupdatetime4">--:--:--</span>
+                                    </span>
+                                </div>
+                                    <div id="equipment4details">
+                                        <textarea name="none" id="textequipment4details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                        <button id="closeequipmentdetailsform4" onclick="closeequipmentdetailsform4()">X</button>
+                                    </div>
+                                    <div id="equipment5throw">
+                                        <div id="item5id">5</div>
+                                        <input id="tamcnid5" placeholder="1. TAMCN">
+                                        <input id="item5name" placeholder="2. NAME OF ITEM">
+                                        <input id="serial5" placeholder="3. SERIAL #">
+                                        <span id="secondrow5">
+                                        <label for="optionSelector5"></label>
+                                        <select id="optionSelector5" onchange="displaySelectedText5()">
+                                            <option value="" disabled selected>4. STATUS</option>
+                                            <option value="option1">OPERATIONAL</option>
+                                            <option value="option2">DEGRADED</option>
+                                            <option value="option3">DEADLINED</option>
+                                        </select>
+                                        <button id="equipmentinfo5" onclick="openequipmentdetailsform5()">5. NOTES</button>
+                                        <button id="saveequipmentform5" onclick="updateequipment5Time(); updateitem5name(); updatetamcn5(); updateserial5(); updatenotes5();">6. SAVE</button>
+                                        <span id="equipmentupdatetime5">--:--:--</span>
+                                        </span>
+                                    </div>
+                                        <div id="equipment5details">
+                                            <textarea name="none" id="textequipment5details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                            <button id="closeequipmentdetailsform5" onclick="closeequipmentdetailsform5()">X</button>
+                                        </div>
+                                        <div id="equipment6throw">
+                                            <div id="item6id">6</div>
+                                            <input id="tamcnid6" placeholder="1. TAMCN">
+                                            <input id="item6name" placeholder="2. NAME OF ITEM">
+                                            <input id="serial6" placeholder="3. SERIAL #">
+                                            <span id="secondrow6">
+                                            <label for="optionSelector6"></label>
+                                            <select id="optionSelector6" onchange="displaySelectedText6()">
+                                                <option value="" disabled selected>4. STATUS</option>
+                                                <option value="option1">OPERATIONAL</option>
+                                                <option value="option2">DEGRADED</option>
+                                                <option value="option3">DEADLINED</option>
+                                            </select>
+                                            <button id="equipmentinfo6" onclick="openequipmentdetailsform6()">5. NOTES</button>
+                                            <button id="saveequipmentform6" onclick="updateequipment6Time(); updateitem6name(); updatetamcn6(); updateserial6(); updatenotes6();">6. SAVE</button>
+                                            <span id="equipmentupdatetime6">--:--:--</span>
+                                            </span>
+                                        </div>
+                                            <div id="equipment6details">
+                                                <textarea name="none" id="textequipment6details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                                <button id="closeequipmentdetailsform6" onclick="closeequipmentdetailsform6()">X</button>
+                                            </div>
+                    <div id="equipmentbottomborder"></div>
+                </div>
+                <div class="front-div" id="personnelupdateform">
+                    <button id="closepersonnelupdateform" onclick="closepersonnelupdateform()">X</button>
+                    <div id="personnelupdateheader"><h1>PERSONNEL STATISTICS FORM</h1></div>
+                    <div id="personneltopborder"></div>
+                    <div id="personnel1strow">
+                        <div id="person1id">1</div>
+                        <input id="zap1" placeholder="1. ZAP #">
+                        <input id="rank1" placeholder="2. RANK">
+                        <input id="lname1" placeholder="3. LNAME">
+                        <span id="secondprow1">
+                        <input id="fname1" placeholder="4. FNAME">
+                        <input id="billet1" placeholder="5. BILLET">
+                        <label for="personSelector1"></label>
+                        <select id="personSelector1" onchange="displaySelectedStatus1()">
+                            <option value="" disabled selected>6. STATUS</option>
+                            <option value="option1">FULL DUTY</option>
+                            <option value="option2">LIGHT DUTY</option>
+                            <option value="option3">LIMITED DUTY</option>
+                        </select>
+                        <button id="personnelinfo1" onclick="openpersonneldetailsform1()">5. NOTES</button>
+                        <button id="savepersonnelform1" onclick="updatepersonnel1Time(); updateperson1zap(); updateperson1rank(); updateperson1lname(); updateperson1fname(); updateperson1billet();updateperson1notes();">6. SAVE</button>
+                        <span id="personnelupdatetime1">--:--:--</span>
+                        </span>
+                    </div>
+                        <div id="personnel1details">
+                            <textarea name="none" id="textpersonnel1details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                            <button id="closepersonneldetailsform1" onclick="closepersonneldetailsform1()">X</button>
+                        </div>
+                        <div id="personnel2ndrow">
+                            <div id="person2id">2</div>
+                            <input id="zap2" placeholder="1. ZAP #">
+                            <input id="rank2" placeholder="2. RANK">
+                            <input id="lname2" placeholder="3. LNAME">
+                            <span id="secondprow2">
+                            <input id="fname2" placeholder="4. FNAME">
+                            <input id="billet2" placeholder="5. BILLET">
+                            <label for="personSelector2"></label>
+                            <select id="personSelector2" onchange="displaySelectedStatus2()">
+                                <option value="" disabled selected>6. STATUS</option>
+                                <option value="option1">FULL DUTY</option>
+                                <option value="option2">LIGHT DUTY</option>
+                                <option value="option3">LIMITED DUTY</option>
+                            </select>
+                            <button id="personnelinfo2" onclick="openpersonneldetailsform2()">5. NOTES</button>
+                            <button id="savepersonnelform2" onclick="updatepersonnel2Time(); updateperson2zap(); updateperson2rank(); updateperson2lname(); updateperson2fname(); updateperson2billet();updateperson2notes();">6. SAVE</button>
+                            <span id="personnelupdatetime2">--:--:--</span>
+                            </span>
+                        </div>
+                            <div id="personnel2details">
+                                <textarea name="none" id="textpersonnel2details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                <button id="closepersonneldetailsform2" onclick="closepersonneldetailsform2()">X</button>
+                            </div>
+                            <div id="personnel3rdrow">
+                                <div id="person3id">3</div>
+                                <input id="zap3" placeholder="1. ZAP #">
+                                <input id="rank3" placeholder="2. RANK">
+                                <input id="lname3" placeholder="3. LNAME">
+                                <span id="secondprow3">
+                                <input id="fname3" placeholder="4. FNAME">
+                                <input id="billet3" placeholder="5. BILLET">
+                                <label for="personSelector3"></label>
+                                <select id="personSelector3" onchange="displaySelectedStatus3()">
+                                    <option value="" disabled selected>6. STATUS</option>
+                                    <option value="option1">FULL DUTY</option>
+                                    <option value="option2">LIGHT DUTY</option>
+                                    <option value="option3">LIMITED DUTY</option>
+                                </select>
+                                <button id="personnelinfo3" onclick="openpersonneldetailsform3()">5. NOTES</button>
+                                <button id="savepersonnelform3" onclick="updatepersonnel3Time(); updateperson3zap(); updateperson3rank(); updateperson3lname(); updateperson3fname(); updateperson3billet();updateperson3notes();">6. SAVE</button>
+                                <span id="personnelupdatetime3">--:--:--</span>
+                                </span>
+                            </div>
+                                <div id="personnel3details">
+                                    <textarea name="none" id="textpersonnel3details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                    <button id="closepersonneldetailsform3" onclick="closepersonneldetailsform3()">X</button>
+                                </div>
+                                <div id="personnel4throw">
+                                    <div id="person4id">4</div>
+                                    <input id="zap4" placeholder="1. ZAP #">
+                                    <input id="rank4" placeholder="2. RANK">
+                                    <input id="lname4" placeholder="3. LNAME">
+                                    <span id="secondprow4">
+                                    <input id="fname4" placeholder="4. FNAME">
+                                    <input id="billet4" placeholder="5. BILLET">
+                                    <label for="personSelector4"></label>
+                                    <select id="personSelector4" onchange="displaySelectedStatus4()">
+                                        <option value="" disabled selected>6. STATUS</option>
+                                        <option value="option1">FULL DUTY</option>
+                                        <option value="option2">LIGHT DUTY</option>
+                                        <option value="option3">LIMITED DUTY</option>
+                                    </select>
+                                    <button id="personnelinfo4" onclick="openpersonneldetailsform4()">5. NOTES</button>
+                                    <button id="savepersonnelform4" onclick="updatepersonnel4Time(); updateperson4zap(); updateperson4rank(); updateperson4lname(); updateperson4fname(); updateperson4billet();updateperson4notes();">6. SAVE</button>
+                                    <span id="personnelupdatetime4">--:--:--</span>
+                                    </span>
+                                </div>
+                                    <div id="personnel4details">
+                                        <textarea name="none" id="textpersonnel4details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                        <button id="closepersonneldetailsform4" onclick="closepersonneldetailsform4()">X</button>
+                                    </div>
+                                    <div id="personnel5throw">
+                                        <div id="person5id">5</div>
+                                        <input id="zap5" placeholder="1. ZAP #">
+                                        <input id="rank5" placeholder="2. RANK">
+                                        <input id="lname5" placeholder="3. LNAME">
+                                        <span id="secondprow5">
+                                        <input id="fname5" placeholder="4. FNAME">
+                                        <input id="billet5" placeholder="5. BILLET">
+                                        <label for="personSelector5"></label>
+                                        <select id="personSelector5" onchange="displaySelectedStatus5()">
+                                            <option value="" disabled selected>6. STATUS</option>
+                                            <option value="option1">FULL DUTY</option>
+                                            <option value="option2">LIGHT DUTY</option>
+                                            <option value="option3">LIMITED DUTY</option>
+                                        </select>
+                                        <button id="personnelinfo5" onclick="openpersonneldetailsform5()">5. NOTES</button>
+                                        <button id="savepersonnelform5" onclick="updatepersonnel5Time(); updateperson5zap(); updateperson5rank(); updateperson5lname(); updateperson5fname(); updateperson5billet();updateperson5notes();">6. SAVE</button>
+                                        <span id="personnelupdatetime5">--:--:--</span>
+                                        </span>
+                                    </div>
+                                        <div id="personnel5details">
+                                            <textarea name="none" id="textpersonnel5details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                            <button id="closepersonneldetailsform5" onclick="closepersonneldetailsform5()">X</button>
+                                        </div>
+                                        <div id="personnel6throw">
+                                            <div id="person6id">6</div>
+                                            <input id="zap6" placeholder="1. ZAP #">
+                                            <input id="rank6" placeholder="2. RANK">
+                                            <input id="lname6" placeholder="3. LNAME">
+                                            <span id="secondprow6">
+                                            <input id="fname6" placeholder="4. FNAME">
+                                            <input id="billet6" placeholder="5. BILLET">
+                                            <label for="personSelector6"></label>
+                                            <select id="personSelector6" onchange="displaySelectedStatus6()">
+                                                <option value="" disabled selected>6. STATUS</option>
+                                                <option value="option1">FULL DUTY</option>
+                                                <option value="option2">LIGHT DUTY</option>
+                                                <option value="option3">LIMITED DUTY</option>
+                                            </select>
+                                            <button id="personnelinfo6" onclick="openpersonneldetailsform6()">5. NOTES</button>
+                                            <button id="savepersonnelform6" onclick="updatepersonnel6Time(); updateperson6zap(); updateperson6rank(); updateperson6lname(); updateperson6fname(); updateperson6billet();updateperson6notes();">6. SAVE</button>
+                                            <span id="personnelupdatetime6">--:--:--</span>
+                                            </span>
+                                        </div>
+                                            <div id="personnel6details">
+                                                <textarea name="none" id="textpersonnel6details" placeholder="TYPE HERE" cols="30" rows="10" oninput="autoResize()"></textarea>
+                                                <button id="closepersonneldetailsform6" onclick="closepersonneldetailsform6()">X</button>
+                                            </div>
+                </div>
+    </container>
+<div id="requestform">
+    <button id="closerequestform" onclick="closerequestform()">X</button>
+        <h2>REQUEST FORM</h2>
+        <select id="arequestdropdown">
+            <option value="below">SELECT BELOW...</option>
+            <option value="supplyoption">SUPPLY</option>
+            <option value="maintenanceoption">MAINTENANCE</option>
+            <option value="personneloption">PERSONNEL</option>
+        </select>
+    <container id="requestcontainer">
+            <div id="arequestmaintenanceform">
+                    <select id="myunitdropdownmaintenance">
+                        <option value="select">1. SELECT YOUR UNIT...</option>
+                        <option value="unita">UNIT A</option>
+                        <option value="unitb">UNIT B</option>
+                    </select><br><br><br>
+                    <select id="unitrequestdropdownmaintenance">
+                        <option value="send">2. SEND REQUEST TO...</option>
+                        <option value="unita">UNIT A</option>
+                        <option value="unitb">UNIT B</option>
+                    </select><br><br><br>
+                    <select id="requesttypemaintenance">
+                        <option value="type">3. TYPE OF REQUEST...</option>
+                        <option value="parts">PARTS ORDER</option>
+                        <option value="maintainer">MAINTAINER SUPPORT</option>
+                        <option value="maintainerandparts">MAINTAINER AND PARTS</option>
+                    </select><br><br><br>
+                <input type="text" id="locationmaintenance" placeholder="4. ENTER LINK UP LOCATION"><br><br><br>
+                <input type="datetime-local" id="timemaintenance" placeholder="5. ENTER LINK UP TIME"><br><br><br>
+                <input type="text" id="detailsmaintenance" placeholder="6. ADDITIONAL DETAILS"><br><br><br>
+                <input type="file" id="attachmaintenance" placeholder="7. ATTACH A FILE"><br><br><br>
+                <button id="refreshmaintenance">REFRESH</button>
+                <button id="submitmaintenance">SUBMIT</button>
+                </div>
+        <div id="supply"></div>
+        <div id="personnel"></div>
+    </container>
+</div>
+        <div class="front-div" id="adashboard">
+            <button id="exitdashboard" onclick="closedashboard()">X</button>
+            <div id="adashboardtitle"><h1>LOG C2 DASHBOARD</h1></div>
+            <div id="dashboardbottomborder"></div>
+            <div id="dashboardtopborder"></div>
+            <div id="dashboardleftborder"></div>
+            <div id="dashboardrightborder"></div>
+            <div id="crticalsupplies">
+            <button id="opensupplyupdate" onclick="opensupplyupdate()"><div id="asupplyupdatelabel"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div></button>
+                <div id="redmarker">
+                    <div id="rednumber">30%</div>
+                </div>
+                <div id="yellowmarker">
+                    <div id="yellownumber">60%</div>
+                </div>
+                <div id="greenmarker">
+                    <div id="greennumber">85%</div>
+                </div>
+                <div id="suppliesdashboardtitle"><h1>CRITICAL SUPPLIES</h1></div>
+                <div id="class1details">
+                    <div id="class1barcontainer">
+                        <div id="class1bar">
+                            <div id="class1output2"><a>NO INPUT</a></div>
+                        </div>
+                    </div>
+                    <div id="class1update2">
+                    <div id="class1dashboardtitle"><h2>CLASS I</h2></div>
+                    <div id="class1timeheader">
+                        <a><b></b></a> 
+                        <span id="class1updatetime2">--:--:--</span>
+                    </div>
+                    <div id="class1moredetails">
+                    <button id="class1dashboardbutton">DETAILS</button>
+                    <div id="class1notes"></div>
+                </div>
+                <div id="class3details">
+                    <div id="class3barcontainer">
+                        <div id="class3bar">
+                            <div id="class3output2"><a>NO INPUT</a></div>
+                        </div>
+                    </div>
+                    <div id="class3update2">
+                    <div id="class3dashboardtitle"><h2>CLASS III</h2></div>
+                    <div id="class3timeheader">
+                        <a><b></b></a> 
+                        <span id="class3updatetime2">--:--:--</span>
+                    </div>
+                    <div id="class3moredetails">
+                    <button id="class3dashboardbutton">DETAILS</button>
+                    <div id="class3notes"></div>
+                </div>
+                </div>
+                </div>
+                <div id="class5details">
+                    <div id="class5barcontainer">
+                        <div id="class5bar">
+                            <div id="class5output2"><a>NO INPUT</a></div>
+                        </div>
+                    </div>
+                    <div id="class5update2">
+                    <div id="class5dashboardtitle"><h2>CLASS V</h2></div>
+                    <div id="class5timeheader">
+                        <a><b></b></a> 
+                        <span id="class5updatetime2">--:--:--</span>
+                    </div>
+                    <div id="class5moredetails">
+                    <button id="class5dashboardbutton">DETAILS</button>
+                    <div id="class5notes"></div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div id="missionessentialequipment">
+                <button id="openequipmentupdate" onclick="openequipmentupdate()"><div id="aequipmentupdatelabel"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div></button>
+                <h1>ESSENTIAL EQUIPMENT</h1>
+                <span id="meesubheaders">
+                <h2>ITEM</h2>
+                <h2>STATUS</h2>
+                </span>
+                <div id="meeborder1"></div>
+                <div id="meeborder2"></div>
+                <div id="item1">
+                    <div id="item1nameoutput"><a>N/A</a></div>
+                    <div id="item1statusoutput" onclick="displayitem1details()"><a>NO INPUT</a></div>
+                    <div id="item1details">
+                        <h3>DETAILS</h3>
+                        <div id="item1detailsborder1"></div>
+                        <div id="item1detailsborder2"></div>
+                        <button id="item1detailsclose" onclick="closeitem1detailsform()">X</button>
+                        <span id="spanitem1num"><label>ITEM #</label></span><div id="item1num"><a>1</a></div><br>
+                        <span id="spanitem1tamcn"><label>TAMCN</label></span><div id="item1tamcn"><a>NO INPUT</a></div><br>
+                        <span id="spanitem1name"><label>ITEM NAME</label></span><div id="item1nam"><a>NO INPUT</a></div><br>
+                        <span id="spanitem1serial"><label>SERIAL#</label></span><div id="item1serial"><a>NO INPUT</a></div><br>
+                        <span id="spanitem1status"><label>STATUS</label></span><div id="item1status"><a>NO INPUT</a></div><br>
+                        <span id="spanitem1notes"><label>NOTES</label></span><textarea name="none" id="item1notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanitem1updated"><label>UPDATED</label></span><span id="item1updated">--:--:--</span>
+                    </div>
+                </div>
+                <div id="item2">
+                    <div id="item2nameoutput"><a>N/A</a></div>
+                    <div id="item2statusoutput" onclick="displayitem2details()"><a>NO INPUT</a></div>
+                    <div id="item2details">
+                        <h3>DETAILS</h3>
+                        <div id="item2detailsborder1"></div>
+                        <div id="item2detailsborder2"></div>
+                        <button id="item2detailsclose" onclick="closeitem2detailsform()">X</button>
+                        <span id="spanitem2num"><label>ITEM #</label></span><div id="item2num"><a>2</a></div><br>
+                        <span id="spanitem2tamcn"><label>TAMCN</label></span><div id="item2tamcn"><a>NO INPUT</a></div><br>
+                        <span id="spanitem2name"><label>ITEM NAME</label></span><div id="item2nam"><a>NO INPUT</a></div><br>
+                        <span id="spanitem2serial"><label>SERIAL#</label></span><div id="item2serial"><a>NO INPUT</a></div><br>
+                        <span id="spanitem2status"><label>STATUS</label></span><div id="item2status"><a>NO INPUT</a></div><br>
+                        <span id="spanitem2notes"><label>NOTES</label></span><textarea name="none" id="item2notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize2()" readonly></textarea><br><br>
+                        <span id="spanitem2updated"><label>UPDATED</label></span><span id="item2updated">--:--:--</span>
+                    </div>
+                </div>
+                    <div id="item3">
+                        <div id="item3nameoutput"><a>N/A</a></div>
+                        <div id="item3statusoutput" onclick="displayitem3details()"><a>NO INPUT</a></div>
+                        <div id="item3details">
+                        <h3>DETAILS</h3>
+                        <div id="item3detailsborder1"></div>
+                        <div id="item3detailsborder2"></div>
+                        <button id="item3detailsclose" onclick="closeitem3detailsform()">X</button>
+                        <span id="spanitem3num"><label>ITEM #</label></span><div id="item3num"><a>3</a></div><br>
+                        <span id="spanitem3tamcn"><label>TAMCN</label></span><div id="item3tamcn"><a>NO INPUT</a></div><br>
+                        <span id="spanitem3name"><label>ITEM NAME</label></span><div id="item3nam"><a>NO INPUT</a></div><br>
+                        <span id="spanitem3serial"><label>SERIAL#</label></span><div id="item3serial"><a>NO INPUT</a></div><br>
+                        <span id="spanitem3status"><label>STATUS</label></span><div id="item3status"><a>NO INPUT</a></div><br>
+                        <span id="spanitem3notes"><label>NOTES</label></span><textarea name="none" id="item3notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize3()" readonly></textarea><br><br>
+                        <span id="spanitem3updated"><label>UPDATED</label></span><span id="item3updated">--:--:--</span>
+                    </div>
+                    </div>
+                    <div id="item4">
+                        <div id="item4nameoutput"><a>N/A</a></div>
+                        <div id="item4statusoutput" onclick="displayitem4details()"><a>NO INPUT</a></div>
+                        <div id="item4details">
+                        <h3>DETAILS</h3>
+                        <div id="item4detailsborder1"></div>
+                        <div id="item4detailsborder2"></div>
+                        <button id="item4detailsclose" onclick="closeitem4detailsform()">X</button>
+                        <span id="spanitem4num"><label>ITEM #</label></span><div id="item4num"><a>4</a></div><br>
+                        <span id="spanitem4tamcn"><label>TAMCN</label></span><div id="item4tamcn"><a>NO INPUT</a></div><br>
+                        <span id="spanitem4name"><label>ITEM NAME</label></span><div id="item4nam"><a>NO INPUT</a></div><br>
+                        <span id="spanitem4serial"><label>SERIAL#</label></span><div id="item4serial"><a>NO INPUT</a></div><br>
+                        <span id="spanitem4status"><label>STATUS</label></span><div id="item4status"><a>NO INPUT</a></div><br>
+                        <span id="spanitem4notes"><label>NOTES</label></span><textarea name="none" id="item4notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize4()" readonly></textarea><br><br>
+                        <span id="spanitem4updated"><label>UPDATED</label></span><span id="item4updated">--:--:--</span>
+                    </div>
+                    </div>
+                    <div id="item5">
+                        <div id="item5nameoutput"><a>N/A</a></div>
+                        <div id="item5statusoutput" onclick="displayitem5details()"><a>NO INPUT</a></div>
+                        <div id="item5details">
+                        <h3>DETAILS</h3>
+                        <div id="item5detailsborder1"></div>
+                        <div id="item5detailsborder2"></div>
+                        <button id="item5detailsclose" onclick="closeitem5detailsform()">X</button>
+                        <span id="spanitem5num"><label>ITEM #</label></span><div id="item5num"><a>5</a></div><br>
+                        <span id="spanitem5tamcn"><label>TAMCN</label></span><div id="item5tamcn"><a>NO INPUT</a></div><br>
+                        <span id="spanitem5name"><label>ITEM NAME</label></span><div id="item5nam"><a>NO INPUT</a></div><br>
+                        <span id="spanitem5serial"><label>SERIAL#</label></span><div id="item5serial"><a>NO INPUT</a></div><br>
+                        <span id="spanitem5status"><label>STATUS</label></span><div id="item5status"><a>NO INPUT</a></div><br>
+                        <span id="spanitem5notes"><label>NOTES</label></span><textarea name="none" id="item5notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize5()" readonly></textarea><br><br>
+                        <span id="spanitem5updated"><label>UPDATED</label></span><span id="item5updated">--:--:--</span>
+                    </div>
+                    </div>
+                    <div id="item6">
+                        <div id="item6nameoutput"><a>N/A</a></div>
+                        <div id="item6statusoutput" onclick="displayitem6details()"><a>NO INPUT</a></div>
+                        <div id="item6details">
+                        <h3>DETAILS</h3>
+                        <div id="item6detailsborder1"></div>
+                        <div id="item6detailsborder2"></div>
+                        <button id="item6detailsclose" onclick="closeitem6detailsform()">X</button>
+                        <span id="spanitem6num"><label>ITEM #</label></span><div id="item6num"><a>6</a></div><br>
+                        <span id="spanitem6tamcn"><label>TAMCN</label></span><div id="item6tamcn"><a>NO INPUT</a></div><br>
+                        <span id="spanitem6name"><label>ITEM NAME</label></span><div id="item6nam"><a>NO INPUT</a></div><br>
+                        <span id="spanitem6serial"><label>SERIAL#</label></span><div id="item6serial"><a>NO INPUT</a></div><br>
+                        <span id="spanitem6status"><label>STATUS</label></span><div id="item6status"><a>NO INPUT</a></div><br>
+                        <span id="spanitem6notes"><label>NOTES</label></span><textarea name="none" id="item6notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize6()" readonly></textarea><br><br>
+                        <span id="spanitem6updated"><label>UPDATED</label></span><span id="item6updated">--:--:--</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="personnelstatistics">
+                <button id="openpersonnelupdate" onclick="openpersonnelupdate()"><div id="apersonnelupdatelabel"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div></button>
+                <h1>PERSONNEL STATISTICS</h1>
+                <span id="personnelsubheaders">
+                <h2>BILLET</h2>
+                <h2>STATUS</h2>
+                </span>
+                <div id="personnelborder1"></div>
+                <div id="personnelborder2"></div>
+                <div id="person1">
+                    <div id="person1billetoutput"><a>N/A</a></div>
+                    <div id="person1statusoutput" onclick="displayperson1details()"><a>NO INPUT</a></div>
+                    <div id="person1details">
+                        <h3>DETAILS</h3>
+                        <div id="person1detailsborder1"></div>
+                        <div id="person1detailsborder2"></div>
+                        <button id="person1detailsclose" onclick="closeperson1detailsform()">X</button>
+                        <span id="spanperson1num"><label>ZAP#</label></span><div id="person1num"><a>NO INPUT</a></div><br>
+                        <span id="spanperson1rank"><label>RANK</label></span><div id="person1rank"><a>NO INPUT</a></div><br>
+                        <span id="spanperson1lname"><label>LNAME</label></span><div id="person1lname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson1fname"><label>FNAME</label></span><div id="person1fname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson1billet"><label>BILLET</label></span><div id="person1billet"><a>NO INPUT</a></div><br>
+                        <span id="spanperson1status"><label>STATUS</label></span><div id="person1status"><a>NO INPUT</a></div><br>
+                        <span id="spanperson1notes"><label>NOTES</label></span><textarea name="none" id="person1notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanperson1updated"><label>UPDATED</label></span><span id="person1updated">--:--:--</span>
+                    </div>
+                </div>
+                <div id="person2">
+                    <div id="person2billetoutput"><a>N/A</a></div>
+                    <div id="person2statusoutput" onclick="displayperson2details()"><a>NO INPUT</a></div>
+                    <div id="person2details">
+                        <h3>DETAILS</h3>
+                        <div id="person2detailsborder1"></div>
+                        <div id="person2detailsborder2"></div>
+                        <button id="person2detailsclose" onclick="closeperson2detailsform()">X</button>
+                        <span id="spanperson2num"><label>ZAP#</label></span><div id="person2num"><a>NO INPUT</a></div><br>
+                        <span id="spanperson2rank"><label>RANK</label></span><div id="person2rank"><a>NO INPUT</a></div><br>
+                        <span id="spanperson2lname"><label>LNAME</label></span><div id="person2lname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson2fname"><label>FNAME</label></span><div id="person2fname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson2billet"><label>BILLET</label></span><div id="person2billet"><a>NO INPUT</a></div><br>
+                        <span id="spanperson2status"><label>STATUS</label></span><div id="person2status"><a>NO INPUT</a></div><br>
+                        <span id="spanperson2notes"><label>NOTES</label></span><textarea name="none" id="person2notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanperson2updated"><label>UPDATED</label></span><span id="person2updated">--:--:--</span>
+                    </div>
+                </div>
+                <div id="person3">
+                    <div id="person3billetoutput"><a>N/A</a></div>
+                    <div id="person3statusoutput" onclick="displayperson3details()"><a>NO INPUT</a></div>
+                    <div id="person3details">
+                        <h3>DETAILS</h3>
+                        <div id="person3detailsborder1"></div>
+                        <div id="person3detailsborder2"></div>
+                        <button id="person3detailsclose" onclick="closeperson3detailsform()">X</button>
+                        <span id="spanperson3num"><label>ZAP#</label></span><div id="person3num"><a>NO INPUT</a></div><br>
+                        <span id="spanperson3rank"><label>RANK</label></span><div id="person3rank"><a>NO INPUT</a></div><br>
+                        <span id="spanperson3lname"><label>LNAME</label></span><div id="person3lname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson3fname"><label>FNAME</label></span><div id="person3fname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson3billet"><label>BILLET</label></span><div id="person3billet"><a>NO INPUT</a></div><br>
+                        <span id="spanperson3status"><label>STATUS</label></span><div id="person3status"><a>NO INPUT</a></div><br>
+                        <span id="spanperson3notes"><label>NOTES</label></span><textarea name="none" id="person3notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanperson3updated"><label>UPDATED</label></span><span id="person3updated">--:--:--</span>
+                    </div>
+                </div>
+                <div id="person4">
+                    <div id="person4billetoutput"><a>N/A</a></div>
+                    <div id="person4statusoutput" onclick="displayperson4details()"><a>NO INPUT</a></div>
+                    <div id="person4details">
+                        <h3>DETAILS</h3>
+                        <div id="person4detailsborder1"></div>
+                        <div id="person4detailsborder2"></div>
+                        <button id="person4detailsclose" onclick="closeperson4detailsform()">X</button>
+                        <span id="spanperson4num"><label>ZAP#</label></span><div id="person4num"><a>NO INPUT</a></div><br>
+                        <span id="spanperson4rank"><label>RANK</label></span><div id="person4rank"><a>NO INPUT</a></div><br>
+                        <span id="spanperson4lname"><label>LNAME</label></span><div id="person4lname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson4fname"><label>FNAME</label></span><div id="person4fname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson4billet"><label>BILLET</label></span><div id="person4billet"><a>NO INPUT</a></div><br>
+                        <span id="spanperson4status"><label>STATUS</label></span><div id="person4status"><a>NO INPUT</a></div><br>
+                        <span id="spanperson4notes"><label>NOTES</label></span><textarea name="none" id="person4notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanperson4updated"><label>UPDATED</label></span><span id="person4updated">--:--:--</span>
+                    </div>
+                </div>
+                <div id="person5">
+                    <div id="person5billetoutput"><a>N/A</a></div>
+                    <div id="person5statusoutput" onclick="displayperson5details()"><a>NO INPUT</a></div>
+                    <div id="person5details">
+                        <h3>DETAILS</h3>
+                        <div id="person5detailsborder1"></div>
+                        <div id="person5detailsborder2"></div>
+                        <button id="person5detailsclose" onclick="closeperson5detailsform()">X</button>
+                        <span id="spanperson5num"><label>ZAP#</label></span><div id="person5num"><a>NO INPUT</a></div><br>
+                        <span id="spanperson5rank"><label>RANK</label></span><div id="person5rank"><a>NO INPUT</a></div><br>
+                        <span id="spanperson5lname"><label>LNAME</label></span><div id="person5lname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson5fname"><label>FNAME</label></span><div id="person5fname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson5billet"><label>BILLET</label></span><div id="person5billet"><a>NO INPUT</a></div><br>
+                        <span id="spanperson5status"><label>STATUS</label></span><div id="person5status"><a>NO INPUT</a></div><br>
+                        <span id="spanperson5notes"><label>NOTES</label></span><textarea name="none" id="person5notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanperson5updated"><label>UPDATED</label></span><span id="person5updated">--:--:--</span>
+                    </div>
+                </div>
+                <div id="person6">
+                    <div id="person6billetoutput"><a>N/A</a></div>
+                    <div id="person6statusoutput" onclick="displayperson6details()"><a>NO INPUT</a></div>
+                    <div id="person6details">
+                        <h3>DETAILS</h3>
+                        <div id="person6detailsborder1"></div>
+                        <div id="person6detailsborder2"></div>
+                        <button id="person6detailsclose" onclick="closeperson6detailsform()">X</button>
+                        <span id="spanperson6num"><label>ZAP#</label></span><div id="person6num"><a>NO INPUT</a></div><br>
+                        <span id="spanperson6rank"><label>RANK</label></span><div id="person6rank"><a>NO INPUT</a></div><br>
+                        <span id="spanperson6lname"><label>LNAME</label></span><div id="person6lname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson6fname"><label>FNAME</label></span><div id="person6fname"><a>NO INPUT</a></div><br>
+                        <span id="spanperson6billet"><label>BILLET</label></span><div id="person6billet"><a>NO INPUT</a></div><br>
+                        <span id="spanperson6status"><label>STATUS</label></span><div id="person6status"><a>NO INPUT</a></div><br>
+                        <span id="spanperson6notes"><label>NOTES</label></span><textarea name="none" id="person6notes" placeholder="NO INPUT" cols="30" rows="10" oninput="autoResize1()" readonly></textarea><br><br>
+                        <span id="spanperson6updated"><label>UPDATED</label></span><span id="person6updated">--:--:--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+</container>
+<container id="mobileversion">
+    <div id="hamburger" onclick="openmenu()">
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+        <div id="bar3"></div>
+    </div>
+    <div id="mobilelogo">LOGC2 MOBILE</div> 
+    <div id="minimenu">
+        <div id="mobilerequests">REQUESTS</div>
+        <div id="mobilereports">REPORTS</div>
+        <div id="mobiledashboard">DASHBOARD</div>
+        <div id="mobiletools">TOOLS</div>
+    </div>
+</container>
+<script src="script.js"></script>
+</body>
+</html>
